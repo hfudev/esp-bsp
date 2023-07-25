@@ -23,3 +23,9 @@ repos:
   hooks:
     - id: check-copyright
       args: ['--config', 'check_copyright_config.yaml']
+
+-   repo: https://github.com/hfudev/doxybook-c
+    rev: f3774473f81f7c3758fdd5827466da3861cab81e
+    hooks:
+    -   id: doxygen-api-md
+        args: ['-i', 'doxygen_output/xml', '-o', 'docs']
